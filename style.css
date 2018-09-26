@@ -1,0 +1,222 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, 
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
+thead, tr, th, td {
+   margin: 0; /* убираем лишние внешние отступы */
+   padding: 0; /* убираем лишние внутренние отступы */
+   border: 0; /* обнуляем границы */
+   outline: 0; /* обнуляем контуры */
+   /*font-size: 14px;  размер шрифта */
+   vertical-align: baseline; /* стандартное выравнивание по вертикали */
+   background: transparent; /* фон по умолчанию */
+   font-family:  Arial, sans-serif, Verdana; /* шрифт по умолчанию*/
+   line-height: 1.4; /* высота строки по умолчанию*/
+   color: #191919; /*цвет шрифта */
+   text-align: left; /*выравнивание текста */
+}
+body {
+    background-color: #f8f8f8;
+    max-width: 1200px;
+    /*width: 1200px; */
+    margin: auto;
+    align-content: center;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background-color: inherit;
+}
+catalogAll img,
+.photo img{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 150px;
+}
+p {
+    margin: 10px 10px 0px 10px;
+    line-height: 24px;
+}
+/*Начало Навигационное меню - ссылки сверху*/
+nav {
+    height: 60px;
+    margin: 0 auto;
+}
+.menu {
+    list-style-type: none;
+    background-color: #686868;
+    height: 60px;
+    font-size: 0px;
+    padding: 0px 0px 0px 120px;
+}
+.menu li,
+.menu a,
+.logo{
+    background-color: inherit;
+    line-height: 60px;
+    float: left;
+    height: 60px;
+    width: 120px;
+}
+/*последний li с пробелом нужен только
+для создания границы, поэтому ширину делаем 0*/
+.menu li:last-child{
+    width: 0px;
+}
+.menu li {
+    text-align: center;
+    font-size: 18px;
+    border-left: 2px solid #f8f8f8;
+}
+.menu a {
+    font-weight: 600;
+    color: #f8f8f8;
+    transition: background .5s linear;
+    text-transform: uppercase;
+}
+.menu a:hover {
+    background-color: #333;
+    transition: background .5s linear;
+}
+.logo {
+    width: 60px;
+    margin-left: 30px;
+    background-color: #686868;
+    background-image: url(img/CustomizableDesign.png);
+    background-repeat: no-repeat;
+}
+/*Конец Навигационное меню - ссылки сверху*/
+
+/*Начало Оформляем заголовки*/
+h1,
+h3,
+h4 {
+    text-align: center;
+    color: black;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    background: linear-gradient(to bottom, #989898, #b8b8b8, #d8d8d8);
+    line-height: 50px;
+    margin-top: 2px;
+}
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    line-height: 26px;
+}
+h4 {
+    line-height: 24px;
+    margin-top: 10px;
+}
+/*Конец Оформляем заголовки*/
+
+/*Начало Страница каталога*/
+.catalogAll {
+    text-align: left;
+    margin: 10px;
+    vertical-align: top;
+}
+.catalog {
+    display: inline-block;
+    width: 200px;
+    height: 230px;
+    /*line-height: 24px;*/
+    padding: 5px;
+    text-align: center;
+    outline: 2px solid #aaa;
+    margin: 10px 10px;
+    vertical-align: top;
+    overflow:hidden;
+}
+.catalog a:hover{
+    color: red;
+}
+/*Конец Страница каталога*/
+
+/*Начало Страница товара*/
+.containerPhoto {
+    align-content: center;
+}
+.photo {
+    margin: 10px auto;
+    /*padding: 4px;*/
+    width: 200px;
+    height: 150px;
+    /*background-color: #eaeaea;*/
+    outline: 2px solid #eaeaea;
+}
+.description {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+    margin: 10px 2%;
+}
+.fullDescriprion {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin: 0px 2%;
+}
+.characteristic {
+    list-style-image: url('img/listMarker.png');
+    color: #282323;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 5%;
+}
+/*Конец Страница товара*/
+
+/*Начало форма обратной связи*/
+form {
+    padding: 10px 0px;
+    text-align: center;
+    border-bottom: 2px solid #686868;
+}
+input {
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 16px;
+}
+/*для кнопок*/
+[type="submit"],
+[type="reset"]{
+        width: 200px;
+}
+[type="submit"]:hover,
+[type="reset"]:hover{
+        background-color: #eaeaea;
+}
+input.field,
+textarea{
+    width: 400px;
+    color: darkslategray;
+    font-size: 16px;
+}
+/*карта*/
+iframe {
+    width: 100%; 
+    height: 400px;
+}
+/*Конец форма обратной связи*/
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: #686868;
+    border-top-color: #686868;
+    border-top-style: solid;
+    border-top-width: 90%;
+}
+
